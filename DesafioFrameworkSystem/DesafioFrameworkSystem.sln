@@ -13,11 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{AF01B180-B81
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{82CFD391-F707-482E-BB8F-FD3179DD0607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioFrameworkSystem.Service", "DesafioFrameworkSystem.Service\DesafioFrameworkSystem.Service.csproj", "{B3A57856-E6E4-4284-BC69-5462EF7A9F49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioFrameworkSystem.Service", "DesafioFrameworkSystem.Service\DesafioFrameworkSystem.Service.csproj", "{B3A57856-E6E4-4284-BC69-5462EF7A9F49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioFrameworkSystem.Messaging.Send", "DesafioFrameworkSystem.Messaging.Send\DesafioFrameworkSystem.Messaging.Send.csproj", "{51F675F1-D035-494E-B795-5757EE19F80E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioFrameworkSystem.Messaging.Send", "DesafioFrameworkSystem.Messaging.Send\DesafioFrameworkSystem.Messaging.Send.csproj", "{51F675F1-D035-494E-B795-5757EE19F80E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioFrameworkSystem.Domain", "DesafioFrameworkSystem.Data\DesafioFrameworkSystem.Domain.csproj", "{92FB8EC0-EBB5-45B2-A305-17AE56DC2B5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioFrameworkSystem.Domain", "DesafioFrameworkSystem.Data\DesafioFrameworkSystem.Domain.csproj", "{92FB8EC0-EBB5-45B2-A305-17AE56DC2B5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioFrameworkSystem.Service.Test", "DesafioFrameworkSystem.Service.Test\DesafioFrameworkSystem.Service.Test.csproj", "{1D50E2C8-8A7F-4B71-AD2B-CA367125F99B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioFrameworkSystem.Api.Test", "DesafioFrameworkSystem.Api.Test\DesafioFrameworkSystem.Api.Test.csproj", "{D8B460E8-82B8-4661-AA68-BBCA065AA700}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{92FB8EC0-EBB5-45B2-A305-17AE56DC2B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92FB8EC0-EBB5-45B2-A305-17AE56DC2B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92FB8EC0-EBB5-45B2-A305-17AE56DC2B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D50E2C8-8A7F-4B71-AD2B-CA367125F99B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D50E2C8-8A7F-4B71-AD2B-CA367125F99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D50E2C8-8A7F-4B71-AD2B-CA367125F99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D50E2C8-8A7F-4B71-AD2B-CA367125F99B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B460E8-82B8-4661-AA68-BBCA065AA700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B460E8-82B8-4661-AA68-BBCA065AA700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B460E8-82B8-4661-AA68-BBCA065AA700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B460E8-82B8-4661-AA68-BBCA065AA700}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +72,8 @@ Global
 		{B3A57856-E6E4-4284-BC69-5462EF7A9F49} = {AF01B180-B81E-4716-BF37-6E11347E45EE}
 		{51F675F1-D035-494E-B795-5757EE19F80E} = {AF01B180-B81E-4716-BF37-6E11347E45EE}
 		{92FB8EC0-EBB5-45B2-A305-17AE56DC2B5A} = {AF01B180-B81E-4716-BF37-6E11347E45EE}
+		{1D50E2C8-8A7F-4B71-AD2B-CA367125F99B} = {82CFD391-F707-482E-BB8F-FD3179DD0607}
+		{D8B460E8-82B8-4661-AA68-BBCA065AA700} = {82CFD391-F707-482E-BB8F-FD3179DD0607}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BD64909D-8ABC-4901-BCF1-C87FA586CB96}

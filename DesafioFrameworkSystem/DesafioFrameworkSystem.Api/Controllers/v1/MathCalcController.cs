@@ -2,7 +2,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -13,12 +12,10 @@ namespace DesafioFrameworkSystem.Api.Controllers
     [Route("v1/[controller]")]
     public class MathCalcController : ControllerBase
     {
-        private readonly ILogger<MathCalcController> _logger;
         private readonly IMediator _mediator;
 
-        public MathCalcController(ILogger<MathCalcController> logger, IMediator mediator)
+        public MathCalcController( IMediator mediator)
         {
-            _logger = logger;
             _mediator = mediator;
         }
 
@@ -33,7 +30,9 @@ namespace DesafioFrameworkSystem.Api.Controllers
         {
             try
             {
-                return (await _mediator.Send(numerosDivisoresQuery)).Numeros;
+                var resultado = await _mediator.Send(numerosDivisoresQuery);
+
+                return resultado.Numeros;
             }
             catch (Exception ex)
             {
@@ -52,7 +51,9 @@ namespace DesafioFrameworkSystem.Api.Controllers
         {
             try
             {
-                return (await _mediator.Send(divisoresPrimosQuery)).Numeros;
+                var resultado =  await _mediator.Send(divisoresPrimosQuery);
+
+                return resultado.Numeros;
             }
             catch (Exception ex)
             {

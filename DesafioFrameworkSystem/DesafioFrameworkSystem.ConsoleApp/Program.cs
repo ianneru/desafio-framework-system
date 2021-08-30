@@ -1,5 +1,4 @@
 ﻿using DesafioFrameworkSystem.Application;
-using DesafioFrameworkSystem.Calc;
 using System;
 using System.Text;
 
