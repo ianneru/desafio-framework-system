@@ -1,8 +1,5 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-#Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
-#For more information, please see https://aka.ms/containercompat
-
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -16,13 +13,20 @@ COPY ["DesafioFrameworkSystem.Messaging.Send/DesafioFrameworkSystem.Messaging.Se
 COPY ["DesafioFrameworkSystem.Data/DesafioFrameworkSystem.Domain.csproj", "DesafioFrameworkSystem.Data/"]
 COPY ["DesafioFrameworkSystem.Service/DesafioFrameworkSystem.Service.csproj", "DesafioFrameworkSystem.Service/"]
 COPY ["DesafioFrameworkSystem.Application/DesafioFrameworkSystem.Application.csproj", "DesafioFrameworkSystem.Application/"]
+COPY ["Tests/DesafioFrameworkSystem.Api.Test/CustomerApi.Test.csproj", "Tests/DesafioFrameworkSystem.Api.Test/"]  
+COPY ["Tests/DesafioFrameworkSystem.Service.Test/CustomerApi.Service.Test.csproj", "Tests/DesafioFrameworkSystem.Service.Test/"]  
+
 RUN dotnet restore "DesafioFrameworkSystem.Api/DesafioFrameworkSystem.Api.csproj"
+RUN dotnet restore "Tests/DesafioFrameworkSystem.Api.Test/DesafioFrameworkSystem.Api.Test.csproj" --configfile "./nuget.config"
+RUN dotnet restore "Tests/DesafioFrameworkSystem.Service.Test/DesafioFrameworkSystem.Service.Test.csproj" --configfile "./nuget.config"
 COPY . .
 WORKDIR "/src/DesafioFrameworkSystem.Api"
 RUN dotnet build "DesafioFrameworkSystem.Api.csproj" -c Release -o /app/build
 
+
 FROM build AS publish
 RUN dotnet publish "DesafioFrameworkSystem.Api.csproj" -c Release -o /app/publish
+
 
 FROM base AS final
 WORKDIR /app

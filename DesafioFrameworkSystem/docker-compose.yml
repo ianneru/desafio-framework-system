@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+  desafioframeworksystem.api:
+    image: ${DOCKER_REGISTRY-}desafioframeworksystemapi
+    build:
+      context: .
+      dockerfile: DesafioFrameworkSystem.Api\Dockerfile
+
